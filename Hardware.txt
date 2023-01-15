@@ -1,0 +1,6 @@
+Wemos D1 Mini - https://www.amazon.ca/KeeYees-Development-ESP8266-Compatible-Arduino/dp/B08ZY7Q7TW/ref=pd_lpo_3?pd_rd_w=d4TE1&content-id=amzn1.sym.bc8b374c-8130-4c45-bf24-4fcc0d96f4d6&pf_rd_p=bc8b374c-8130-4c45-bf24-4fcc0d96f4d6&pf_rd_r=WSDQNNSCP6G29XEFNHK8&pd_rd_wg=sfrc9&pd_rd_r=1ba8f951-09e4-450e-8a48-165ff6f94064&pd_rd_i=B08ZY7Q7TW&psc=1
+Reed Sensors - https://www.amazon.ca/dp/B088LRVND1?psc=1&ref=ppx_yo2ov_dt_b_product_details
+
+- Connect 1 pin on each sensor to ground. 
+- Connect the other pin on each sensor to D1 and D5
+

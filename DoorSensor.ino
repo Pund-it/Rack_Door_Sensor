@@ -3,7 +3,7 @@
 
 //Reed Switch
 const int DOOR_SENSOR_PIN = D1; // Arduino pin on wemosd1mini = D1
-const int DOOR_SENSOR_PIN2 = D5; // Arduino pin on wemosd1mini = D1
+const int DOOR_SENSOR_PIN2 = D5; // Arduino pin on wemosd1mini = D5
 int currentDoorState; // current state of door sensor
 int lastDoorState;    // previous state of door sensor
 int currentDoorState2; // current state of door sensor
@@ -148,14 +148,9 @@ void loop() {
       ++value;
       //Build String
       String payload = "Open";
-      //payload += " Door: ";
-      //payload += "Open";
-      //EndString
       String pubTopic;
       pubTopic += topic ;
-      pubTopic += "/";
-      pubTopic += "openclose";
-      pubTopic += "/";
+      pubTopic += "/openclose/";
       pubTopic += rack;
       pubTopic += "-";
       pubTopic += door;
@@ -177,14 +172,9 @@ void loop() {
       ++value;
       //Build String
       String payload = "Closed";
-      //payload += " Door: ";
-      //payload += "Closed";
-      //EndString
       String pubTopic;
       pubTopic += topic ;
-      pubTopic += "/";
-      pubTopic += "openclose";
-      pubTopic += "/";
+      pubTopic += "/openclose/";
       pubTopic += rack;
       pubTopic += "-";
       pubTopic += door;
@@ -209,14 +199,9 @@ void loop() {
       ++value;
       //Build String
       String payload = "Open";
-      //payload += " Door: ";
-      //payload += "Open";
-      //EndString
       String pubTopic;
       pubTopic += topic ;
-      pubTopic += "/";
-      pubTopic += "openclose";
-      pubTopic += "/";
+      pubTopic += "/openclose/";
       pubTopic += rack;
       pubTopic += "-";
       pubTopic += door2;
@@ -238,14 +223,9 @@ void loop() {
       ++value;
       //Build String
       String payload = "Closed";
-      //payload += " Door: ";
-      //payload += "Closed";
-      //EndString
       String pubTopic;
       pubTopic += topic ;
-      pubTopic += "/";
-      pubTopic += "openclose";
-      pubTopic += "/";
+      pubTopic += "/openclose/";
       pubTopic += rack;
       pubTopic += "-";
       pubTopic += door2;

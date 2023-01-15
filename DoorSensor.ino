@@ -1,30 +1,26 @@
-
+#include <ESP8266WiFi.h>
+#include <PubSubClient.h>
 #include <Wire.h>
 
 //Reed Switch
 const int DOOR_SENSOR_PIN = D1; // Arduino pin on wemosd1mini = D1
 const int DOOR_SENSOR_PIN2 = D5; // Arduino pin on wemosd1mini = D5
+//Variables
 int currentDoorState; // current state of door sensor
 int lastDoorState;    // previous state of door sensor
 int currentDoorState2; // current state of door sensor
 int lastDoorState2;    // previous state of door sensor
-
-
-#include <ESP8266WiFi.h>
-#include <PubSubClient.h>
-
-// Update these with values suitable for your network.
-
-const char* ssid = "Pund-IT";
-const char* pswd = "pun!Zlrn6006";
-const char* mqtt_server = "10.255.249.52";
 const char* topic = "rackdoors";    // this is the [root topic]
 const char* rack = "R3C2"; // Rack
 const char* door = "Front"; // front/back
 const char* door2 = "Rear"; // front/rear
 
-
-long timeBetweenMessages = 100;
+//Network
+const char* ssid = "Pund-IT";
+const char* pswd = "pun!Zlrn6006";
+const char* mqtt_server = "10.255.249.52";
+//delay between readings
+long timeBetweenMessages = 1000;
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -59,7 +55,6 @@ void callback(char* topic, byte* payload, unsigned int length) {
   }
   Serial.println();
 }
-
 
 String macToStr(const uint8_t* mac)
 {
